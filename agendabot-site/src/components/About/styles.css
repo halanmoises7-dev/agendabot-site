@@ -52,18 +52,62 @@
   margin-bottom: 25px;
 }
 
+/* --- NOVO: Container para alinhar lista e botão --- */
+.about-footer-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 40px; /* Espaço entre a lista e o botão */
+  margin-top: 20px;
+}
+
 .about-list {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .about-list li {
   margin-bottom: 12px;
   font-weight: 500;
   color: #444;
+  white-space: nowrap; /* Evita que o texto da lista quebre e empurre o botão */
 }
 
+/* Estilo do Botão (Local Laranja) */
+.btn-ver-preco {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border: 2px solid #007bff;
+  color: #007bff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+
+/* Ajuste para Celular */
 @media (max-width: 768px) {
   .about-container { text-align: center; }
-  .about-list li { text-align: left; display: inline-block; width: 100%; }
+  
+  .about-footer-wrapper {
+    flex-direction: column; /* No celular, o botão vai para baixo */
+    align-items: center; 
+    gap: 25px;
+  }
+
+  .about-list li { 
+    text-align: left; 
+    display: inline-block; 
+    width: 100%; 
+    white-space: normal; /* No celular a linha pode quebrar */
+  }
+
+  .btn-ver-preco {
+    width: 100%;
+    max-width: 280px;
+  }
 }

@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Contact = () => {
   return (
     <section id="contato" style={{ 
@@ -40,7 +38,7 @@ const Contact = () => {
             width: '100%', // No mobile, botões largos são melhores
             maxWidth: '300px', 
             padding: '16px', // Área de clique maior (melhor UX)
-            backgroundColor: '#2563eb', 
+            backgroundColor: '#475569', 
             color: '#fff', 
             borderRadius: '12px',
             textDecoration: 'none',

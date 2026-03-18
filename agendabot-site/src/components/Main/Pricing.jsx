@@ -1,4 +1,3 @@
-import React from 'react';
 import './Pricing.css'; // Importante: verifica se o caminho está correto!
 
 const Pricing = () => {
@@ -14,7 +13,7 @@ const Pricing = () => {
       </div>
 
       <div className="pricing-card">
-        <span className="pricing-badge">O MAIS COMPLETO</span>
+        <span className="pricing-badge">ACESSO COMPLETO</span>
 
         <div className="price-container">
           <span className="currency">R$</span>
@@ -23,7 +22,7 @@ const Pricing = () => {
         </div>
 
         <ul className="benefits-list">
-          {['Agendamentos ilimitados', 'Atendimento 24h', 'Lembretes automáticos', 'Painel de controle', 'Suporte prioritário'].map((item, index) => (
+          {['Agendamentos ilimitados', 'Atendimento 24h', 'Histórico de Agendamentos', 'Painel de controle', 'Suporte prioritário'].map((item, index) => (
             <li key={index} className="benefit-item">
               <span className="check-icon">✓</span> {item}
             </li>

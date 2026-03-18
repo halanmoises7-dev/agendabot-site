@@ -5,9 +5,24 @@ const About = () => {
     <section id="sobre" className="about-section">
       <div className="about-container">
         <div className="about-image">
-          {/* Aqui depois você coloca uma imagem do seu bot ou um mockup */}
-          <div className="image-placeholder">
-            <span>Mockup do Bot</span>
+          <div className="image-placeholder" style={{ 
+            width: '100%', 
+            height: '100%', 
+            borderRadius: '20px', 
+            overflow: 'hidden',
+            border: 'none',
+            background: 'transparent'
+          }}>
+            <img 
+              src="/AgendaBot_Mockup.png" 
+              alt="Mockup do AgendaBot" 
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                borderRadius: '20px'
+              }}
+            />
           </div>
         </div>
         
@@ -19,11 +34,19 @@ const About = () => {
             consulta sua disponibilidade em tempo real e finaliza o agendamento sem que você 
             precise parar o que está fazendo.
           </p>
-          <ul className="about-list">
-            <li>✅ Integração direta com WhatsApp</li>
-            <li>✅ Sem necessidade de instalação para o cliente</li>
-            <li>✅ Painel de controle simples e intuitivo</li>
-          </ul>
+          
+          {/* Wrapper criado para alinhar a lista e o botão lado a lado */}
+          <div className="about-footer-wrapper">
+            <ul className="about-list">
+              <li>✅ Integração direta com WhatsApp</li>
+              <li>✅ Sem necessidade de instalação para o cliente</li>
+              <li>✅ Painel de controle simples e intuitivo</li>
+            </ul>
+
+            <a href="#planos" className="btn-ver-preco">
+              Ver Plano Único
+            </a>
+          </div>
         </div>
       </div>
     </section>

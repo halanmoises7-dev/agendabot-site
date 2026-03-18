@@ -1,4 +1,3 @@
-import React from 'react';
 import './styles.css';
 // Adicionamos a importação do Link abaixo:
 import { Link } from 'react-router-dom';

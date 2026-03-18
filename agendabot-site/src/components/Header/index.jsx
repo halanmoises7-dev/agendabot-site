@@ -1,4 +1,3 @@
-import React from 'react';
 import './styles.css';
 
 const Header = () => {
@@ -6,7 +5,11 @@ const Header = () => {
     <header className="navbar">
       <div className="container">
         <div className="logo">
-          <h1>AGENDA<span>BOT</span></h1>
+          <h1>
+                <a href="#" style={{ textDecoration: 'none', color: 'inherit' }}>
+                    AGENDA<span>BOT</span>
+                </a>
+            </h1>
         </div>
         <nav>
           <ul className="nav-links">
@@ -14,7 +17,6 @@ const Header = () => {
             <li><a href="#sobre">Conheça o Chatbot</a></li>
             <li><a href="#recursos">Recursos</a></li>
             <li><a href="#contato">Contato</a></li>
-            {/* Link atualizado para a plataforma externa */}
             <li>
               <a 
                 href="https://agendabot-web.vercel.app/" 
