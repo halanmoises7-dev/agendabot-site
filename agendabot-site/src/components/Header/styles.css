@@ -22,15 +22,15 @@
 }
 
 .logo h1 {
-  font-size: 2.25rem; /* text-4xl */
-  font-weight: 900;    /* font-black */
-  color: #0f172a;      /* text-slate-900 */
-  letter-spacing: -0.025em; /* tracking-tight */
-  font-family: sans-serif;  /* Fonte padrão do Tailwind */
+  font-size: 2.25rem;
+  font-weight: 900;
+  color: #0f172a;
+  letter-spacing: -0.025em;
+  font-family: sans-serif;
 }
 
 .logo span {
-  color: #2563eb;      /* text-blue-600 */
+  color: #2563eb;
 }
 
 .nav-links {
@@ -42,8 +42,9 @@
 .nav-links a {
   text-decoration: none;
   color: #555;
-  font-weight: 500;
+  font-weight: 600;
   transition: color 0.3s;
+  font-family: 'Inter', sans-serif;
 }
 
 .nav-links a:hover {

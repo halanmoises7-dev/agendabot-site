@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-content">
           <div className="footer-brand">
-            <h2>Agenda<span>Bot</span></h2>
+            <h2>AGENDA<span>BOT</span></h2>
             <p>Sua agenda inteligente no WhatsApp, funcionando 24h por dia para o seu negócio.</p>
           </div>
 

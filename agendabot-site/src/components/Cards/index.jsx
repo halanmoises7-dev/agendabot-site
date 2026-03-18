@@ -3,7 +3,6 @@ import FeatureCard from './FeatureCard';
 import './styles.css';
 
 const CardsSection = () => {
-  // Aqui você define os dados que vão aparecer nos seus cards
   const cardData = [
     {
       title: "Agendamento Online",
@@ -16,9 +15,9 @@ const CardsSection = () => {
       icon: "⚙️"
     },
     {
-      title: "Notificações Automáticas",
-      description: "Envie lembretes de confirmação para reduzir as faltas dos seus clientes.",
-      icon: "🔔"
+      title: "Atendimento 24/7",
+      description: "Responda dúvidas e realize agendamentos em tempo real, mesmo fora do seu horário comercial.",
+      icon: "🤖"
     }
   ];
 

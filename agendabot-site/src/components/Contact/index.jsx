@@ -3,9 +3,10 @@ import React from 'react';
 const Contact = () => {
   return (
     <section id="contato" style={{ 
-      padding: '100px 20px', 
+      padding: '60px 20px', 
       textAlign: 'center', 
-      backgroundColor: '#ffffff' 
+      backgroundColor: '#ffffff',
+      borderTop: '1px solid #e2e8f0'
     }}>
       <div style={{ maxWidth: '800px', margin: '0 auto' }}>
         <h2 style={{ 
@@ -14,7 +15,7 @@ const Contact = () => {
           marginBottom: '20px',
           fontWeight: 'bold' 
         }}>
-          Pronto para automatizar sua agenda?
+          Pronto(a) para simplificar sua rotina?
         </h2>
         
         <p style={{ 
@@ -23,7 +24,7 @@ const Contact = () => {
           marginBottom: '40px',
           lineHeight: '1.6' 
         }}>
-          Pare de perder tempo com agendamentos manuais. Deixe o <strong>AgendaBot</strong> trabalhar para você 24h por dia no WhatsApp.
+          Mantenha o controle total da sua agenda com mais facilidade. O <strong>AgendaBot</strong> funciona como um assistente que organiza seus horários e <strong>deixa tudo pronto para você finalizar o atendimento</strong> e focar no fechamento de novos clientes.
         </p>
 
         <a 
