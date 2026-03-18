@@ -1,0 +1,56 @@
+.cards-container {
+  padding: 80px 20px;
+  background-color: #f8f9fa; /* Um cinza bem clarinho para dar contraste */
+}
+
+.content-limit {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title-section {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 50px;
+  color: #333;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* Estilo do Card Individual */
+.feature-card {
+  background: #fff;
+  padding: 40px 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border-bottom: 4px solid transparent;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  border-bottom: 4px solid #007bff; /* Cor azul do seu tema */
+}
+
+.icon-wrapper {
+  font-size: 45px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.feature-card h3 {
+  font-size: 1.25rem;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.feature-card p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
