@@ -28,7 +28,7 @@ const About = () => {
         
         <div className="about-text">
           <span className="subtitle">Conheça o Chatbot</span>
-          <h2>Atendimento inteligente que <span>trabalha por você</span></h2>
+          <h2>Atendimento inteligente que <span>trabalha por você.</span></h2>
           <p>
             O AgendarBot não é apenas um chat automático. Ele entende a necessidade do seu cliente, 
             consulta sua disponibilidade em tempo real e finaliza o agendamento sem que você 
