@@ -6,17 +6,18 @@ const CardsSection = () => {
     {
       title: "Agendamento Online",
       description: "Seu cliente escolhe o melhor horário diretamente pelo bot, sem complicação.",
-      icon: "📅"
+      // Substitua os nomes abaixo pelos nomes exatos dos arquivos que você colocou na pasta public
+      image: "/AgendamentoOnline.png" 
     },
     {
       title: "Gestão de Horários",
       description: "Controle total da sua agenda em um só lugar, evitando marcações duplicadas.",
-      icon: "⚙️"
+      image: "/GestaodeHorarios.png"
     },
     {
       title: "Atendimento 24/7",
       description: "Responda dúvidas e realize agendamentos em tempo real, mesmo fora do seu horário comercial.",
-      icon: "🤖"
+      image: "/Atendimento.png"
     }
   ];
 
@@ -28,7 +29,7 @@ const CardsSection = () => {
           {cardData.map((card, index) => (
             <FeatureCard 
               key={index}
-              icon={card.icon}
+              image={card.image} // Alterado de 'icon' para 'image'
               title={card.title}
               description={card.description}
             />
