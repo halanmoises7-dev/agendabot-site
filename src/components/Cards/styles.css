@@ -37,9 +37,20 @@
 }
 
 .icon-wrapper {
-  font-size: 45px;
+  /* O font-size foi removido, pois agora usamos imagens em vez de texto/emoji */
   margin-bottom: 20px;
-  display: inline-block;
+  display: inline-flex; /* Alterado para flex para centralizar a imagem perfeitamente */
+  align-items: center;
+  justify-content: center;
+  height: 64px; /* Altura fixa para manter o padrão visual dos cards */
+}
+
+/* Nova classe adicionada para controlar as imagens inseridas na pasta public */
+.feature-image {
+  width: 100%;
+  max-width: 64px; /* Tamanho base da imagem, equivalente a um ícone grande */
+  max-height: 100%;
+  object-fit: contain; /* Garante que a imagem não fique esticada ou achatada */
 }
 
 .feature-card h3 {
