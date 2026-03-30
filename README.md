@@ -24,7 +24,6 @@ O **AgendaBot** é um Micro-SaaS focado em automação de agendamentos para pequ
 - **[Docker & Docker Compose](https://www.docker.com/)** - Containerização para deploy e portabilidade.
 - **[Nginx](https://www.nginx.com/)** - Servidor web de alta performance para os arquivos estáticos.
 - **[CSS Modules/BEM Style]** - Estilização organizada e separada por componente.
-- **[CSS Modules/BEM Style]** - Estilização organizada e separada por componente.
 - **[Lucide React / Icons]** - Iconografia moderna (se aplicável).
 
 ---
