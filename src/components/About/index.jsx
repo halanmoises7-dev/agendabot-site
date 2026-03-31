@@ -43,7 +43,7 @@ const About = () => {
             </ul>
 
             <a href="#planos" className="btn-ver-preco">
-              Ver Plano Único
+              Ver Planos
             </a>
           </div>
         </div>
