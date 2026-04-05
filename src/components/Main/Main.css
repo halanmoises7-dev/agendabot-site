@@ -1,28 +1,28 @@
-/* AVISO: Se o clique no link "Início" desalinhar, você precisará adicionar 
-   scroll-padding-top: 80px no seu arquivo de CSS GLOBAL, 
-   pois o seletor 'html' não pode ser isolado. 
-*/
+/* 1. CONFIGURAÇÃO DE ROLAGEM ISOLADA */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 10px; 
+}
 
-/* 1. RESET RESTRITO APENAS AO CONTEÚDO DO HERO */
+/* 2. RESET RESTRITO AO HERO */
 .main-hero, 
 .main-hero * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* Garante que a fonte não mude no resto do site */
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* 2. ESTRUTURA DA SEÇÃO */
+/* 3. ESTRUTURA PRINCIPAL DO HERO */
 .main-hero {
   background-color: #ffffff;
-  min-height: 100vh; 
+  
+  padding: 100px 5% 80px !important; 
+  
   display: flex;
   justify-content: center;
-  align-items: center; 
-  padding: 90px 5%; 
   position: relative;
   overflow: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .main-hero .hero-container {
@@ -31,10 +31,10 @@
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   gap: 60px;
-  align-items: center;
+  align-items: center; 
 }
 
-/* 3. LADO ESQUERDO (TEXTOS) */
+/* 4. CONTEÚDO ESQUERDO */
 .main-hero .hero-text-content {
   display: flex;
   flex-direction: column;
@@ -42,16 +42,17 @@
 }
 
 .main-hero .hero-logo-wrapper {
-  margin-bottom: 1.8rem;
+  margin-bottom: 1.5rem;
   display: flex;
   margin-left: -7px; 
 }
 
 .main-hero .main-hero-logo {
   height: auto;
-  max-width: 320px; /* Tamanho natural ajustado */
+  max-width: 320px;
   object-fit: contain;
   filter: drop-shadow(0 4px 12px rgba(0,0,0,0.05));
+  margin-top: -10px; 
 }
 
 .main-hero .main-description {
@@ -63,7 +64,7 @@
   text-align: left;
 }
 
-/* 4. BOTÕES (Com proteção !important para não herdar cores globais) */
+/* 5. BOTÕES */
 .main-hero .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -108,7 +109,7 @@
   font-weight: 600;
 }
 
-/* 5. CARDS DE ESTATÍSTICAS */
+/* 6. CARDS DE ESTATÍSTICAS */
 .main-hero .hero-badge-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -146,11 +147,10 @@
   letter-spacing: 0.8px;
 }
 
-/* 6. RESPONSIVIDADE RESTRITA */
+/* 7. RESPONSIVIDADE */
 @media (max-width: 850px) {
   .main-hero {
-    height: auto;
-    padding: 120px 5% 80px;
+    padding: 110px 5% 60px !important;
   }
 
   .main-hero .hero-container {
