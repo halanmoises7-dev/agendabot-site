@@ -1,11 +1,26 @@
+/* 1. RESET DE NAVEGADOR - Essencial para remover espaços fantasmas */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  overflow-x: hidden; /* Evita rolagem horizontal indesejada */
+}
+
+/* 2. ESTRUTURA PRINCIPAL DO HERO */
 .main-hero {
-  padding: 0 5%;
+  /* O padding-top de 120px cria o recuo necessário para o menu fixo */
+  padding: 120px 5% 80px; 
   background-color: #ffffff;
-  height: 100vh; 
+  min-height: 100vh; 
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden; 
+  position: relative;
+  z-index: 1;
 }
 
 .hero-container {
@@ -13,22 +28,26 @@
   width: 100%;
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: 40px;
+  gap: 60px;
   align-items: center;
 }
 
-/* CONTAINER DA LOGO */
+/* 3. LADO ESQUERDO - CONTEÚDO DE TEXTO */
+.hero-text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .hero-logo-wrapper {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   display: flex;
   justify-content: flex-start;
-  margin-left: -8px; 
-  margin-top: 100px
 }
 
 .main-hero-logo {
-  height: 105px; 
-  width: auto;
+  height: auto;
+  max-width: 320px; /* Ajuste conforme o tamanho real da sua imagem MarkeiBot */
   object-fit: contain;
   filter: drop-shadow(0 4px 12px rgba(0,0,0,0.05));
 }
@@ -37,37 +56,41 @@
   font-size: 1.15rem;
   color: #4a5568;
   line-height: 1.6;
-  margin-bottom: 35px;
-  max-width: 480px;
+  margin-bottom: 40px;
+  max-width: 500px;
   text-align: left;
 }
 
+/* 4. BOTÕES E AÇÕES */
 .hero-actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 15px;
   margin-bottom: 25px;
 }
 
-/* BOTÕES ESTILIZADOS */
 .cta-button-main {
   background-color: #007bff;
   color: white;
-  padding: 16px 35px;
+  padding: 18px 38px;
   border-radius: 12px;
   text-decoration: none;
   font-weight: 800;
-  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: inline-block;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   box-shadow: 0 10px 25px rgba(0, 123, 255, 0.25);
 }
 
 .secondary-button-main {
+  background-color: transparent;
   border: 2px solid #e2e8f0;
   color: #1e293b;
-  padding: 16px 35px;
+  padding: 18px 38px;
   border-radius: 12px;
   text-decoration: none;
   font-weight: 800;
-  transition: 0.3s;
+  display: inline-block;
+  transition: all 0.3s ease;
 }
 
 .cta-button-main:hover {
@@ -76,87 +99,116 @@
   box-shadow: 0 15px 30px rgba(0, 123, 255, 0.35);
 }
 
+.secondary-button-main:hover {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+  transform: translateY(-3px);
+}
+
 .hero-subtext {
   font-size: 0.9rem;
   color: #94a3b8;
   font-weight: 600;
+  display: block;
 }
 
-/* LADO DIREITO - CARDS */
+/* 5. LADO DIREITO - CARDS DE ESTATÍSTICAS */
 .hero-visual {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .hero-badge-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  width: 100%;
 }
 
 .stats-card {
-  background: white;
-  padding: 30px 25px;
+  background: #ffffff;
+  padding: 35px 25px;
   border-radius: 24px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.06);
   border: 1px solid #f1f5f9;
   text-align: center;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
+}
+
+.stats-card:hover {
+  transform: translateY(-10px);
 }
 
 .stats-number {
   display: block;
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   font-weight: 900;
   color: #007bff;
-  line-height: 1;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .stats-label {
   font-size: 0.75rem;
   color: #64748b;
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-/* RESPONSIVIDADE DESKTOP */
-@media (min-width: 851px) {
+/* 6. RESPONSIVIDADE */
+
+/* Telas Médias (Tablets e Notebooks pequenos) */
+@media (max-width: 1024px) {
+  .hero-container {
+    gap: 30px;
+  }
   .main-hero-logo {
-    height: 135px;
+    max-width: 280px;
   }
 }
 
-/* RESPONSIVIDADE MOBILE */
+/* Mobile (Celulares e Tablets em pé) */
 @media (max-width: 850px) {
   .main-hero {
     height: auto;
-    padding: 120px 5% 80px;
+    padding-top: 100px; /* Reduz um pouco o topo no mobile */
   }
+
   .hero-container {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 50px;
   }
+
   .hero-text-content {
-    display: flex;
-    flex-direction: column;
     align-items: center;
   }
+
   .hero-logo-wrapper {
     justify-content: center;
-    margin-left: 0;
   }
+
   .main-description {
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 35px;
   }
+
   .hero-actions {
+    justify-content: center;
     flex-direction: column;
     width: 100%;
-    max-width: 300px;
+    max-width: 320px;
   }
-  .main-hero-logo {
-    height: 85px;
+}
+
+/* Celulares Pequenos */
+@media (max-width: 480px) {
+  .hero-badge-container {
+    grid-template-columns: 1fr; /* Empilha os cards em telas muito estreitas */
+  }
+  
+  .stats-number {
+    font-size: 2rem;
   }
 }
