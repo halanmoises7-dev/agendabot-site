@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Main from './components/Main';
 import About from './components/About';
@@ -21,9 +22,20 @@ const Home = () => (
   </>
 );
 
+const ScrollToTop = () => {
+  const { pathname } = useLocation(); // Ele vê que você saiu da Home e foi para /instalar
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // O comando que zera o scroll
+  }, [pathname]);
+
+  return null;
+};
+
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="App">
         <Routes>
           <Route path="/" element={<Home />} />

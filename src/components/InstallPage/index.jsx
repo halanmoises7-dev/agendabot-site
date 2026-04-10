@@ -7,6 +7,7 @@ const InstallPage = () => {
   const [deferredPrompt, setDeferredPrompt] = useState(null);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const ua = navigator.userAgent || navigator.vendor || window.opera;
     const isAndroid = /android/i.test(ua);
     const isIos = /iPad|iPhone|iPod/.test(ua) && !window.MSStream;
