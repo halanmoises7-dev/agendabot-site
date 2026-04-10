@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /instalar
+
+Sitemap: https://markeibot.com.br/sitemap.xml

@@ -7,6 +7,14 @@ const InstallPage = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    // --- BLOQUEIO DO ROBÔ (NOINDEX) ---
+    const metaRobots = document.createElement('meta');
+    metaRobots.name = 'robots';
+    metaRobots.content = 'noindex, nofollow';
+    document.head.appendChild(metaRobots);
+    // ----------------------------------
+
     const ua = navigator.userAgent || navigator.vendor || window.opera;
     if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
       setDevice('ios');
@@ -15,6 +23,11 @@ const InstallPage = () => {
     } else {
       setDevice('desktop');
     }
+
+    // LIMPEZA AO SAIR DA PÁGINA
+    return () => {
+      document.head.removeChild(metaRobots);
+    };
   }, []);
 
   return (
