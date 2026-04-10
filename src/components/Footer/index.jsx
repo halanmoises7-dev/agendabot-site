@@ -22,6 +22,7 @@ const Footer = () => {
               <li><a href="#sobre">Sobre</a></li>
               <li><a href="#recursos">Recursos</a></li>
               <li><Link to="/politica">Política de Privacidade</Link></li>
+              <li><Link to="/instalar" style={{ fontWeight: 'bold', color: '#007bff' }}>Instalar App</Link></li>
             </ul>
           </div>
 
